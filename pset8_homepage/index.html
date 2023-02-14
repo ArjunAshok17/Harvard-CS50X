@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Arjun's Website</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+
+                <!-- Define Bar -->
+                <a class="navbar-brand" href="/index.html">Explore My Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/coding_projects.html">Coding Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/education.html">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/experience.html">Experience</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Title -->
+        <h2 class="display-2 text-center">My Story</h1>
+
+        <!-- Introduction -->
+        <div id="introduction">
+            <h3 class="display-3">Introduction</h2>
+            <p class="lead">
+                Hello, world! I'm Arjun. Welcome to my website!
+            </p>
+
+            <p>
+                I'm a freshman at UC Davis studying computer science. This is my first [formal] dive into programming a website,
+                so please have some patience with navigating this website. I've usually stuck to backend development and machine learning, but this is
+                a new and exciting challenge--and one I have to take on for CS50x :)--and I hope to get better at front-end a web development as I progress
+                in my career.
+            </p>
+            <p>
+                In this website, you'll find the history of my journey in computer science thus far. Have fun poking around :)
+            </p>
+        </div>
+
+        <!-- Interests & Future Plans -->
+        <div id="future_plans">
+            <h3 class="display-3">Interests & Future Plans</h3>
+            <p class="lead">
+                I have big plans for the future.
+            </p>
+
+            <p>
+                I've always felt the need to learn, but not necessarily because it's fun. Don't get me wrong, I love spending time exploring
+                what different concentrations, languages, classes, and people computer science has to offer. But it goes deeper than that. I have a fear
+                of black holes, but more of what they represent: the edge between the known and unknown. We can only predict, but not yet know what's beyond
+                the mysterious event horizon, and that blank void that stares back at me frightens me. I'm scared of the unknown, and I comfort that fear by
+                learning as much as I can. It's a toxic relationship I share with learning, but it's one that makes me certain my future pursuits will end
+                the same way regardless of which path I choose: success.
+            </p>
+
+            <p>
+                All that being said, I do hope to dive deeper into machine learning and what it has to offer the world, but also what it has to harm the world.
+            </p>
+        </div>
+
+        <!-- Button -->
+        <div id="mysterious-button">
+            <button id="mystbtn" type="button" class="btn btn-outline-primary btn-lg">Mystery Button ???</button>
+            <h5 id="mystmsg" class="display-5"></h5>
+        </div>
+
+        <!-- Scripting -->
+        <script>
+            document.querySelector("#mystbtn").addEventListener("click", function() {
+                document.querySelector("#mystmsg").innerHTML = "Congratulations! You clicked a button";
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,29 @@
+sort1 uses: bubble sort
+
+How do you know?: A key indicator of bubble sort is its best case Omega(n) runtime, but its relatively slow O(n^2) time complexity. The data supports that in a sorted set, the algorithm takes very little time to run through the data while in a reversed or random (unsorted) dataset the timing is significantly greater. All of these characteristics points to the algorithm in use being bubble sort.
+
+/* sort1 timings:
+ * reversed50000 -> 6.285s
+ * sorted50000 -> .46s
+ * random50000 -> 8.063s
+ */
+
+sort2 uses: merge sort
+
+How do you know?: Merge Sort will run at the same time complexity regardless of the data set (Omega(nlog n) == O(nlog n) == Theta(nlog n)), but also has the best worst case runtimes of all the algorithms. So, merge sort should yield similar & (shorter - relative to the other sorting algorithms) times for a random, sorted, and reversed data sets, as seen below with the recorded timing data.
+
+/* sort2 timings:
+ * reversed50000 -> 0.507s
+ * sorted50000 -> .516s
+ * random50000 -> .428s
+ */
+
+sort3 uses: selection sort
+
+How do you know?: Selection Sort has the same time complexity regardless of the case (Omega(n^2) == O(n^2) == Theta(n^2)), which the timing data supports with very similar times for each type of dataset (reversed, sorted, and random) since the algorithm will do the same amount of work regardless. Because these times are also longer than sort2, we can determine that this must be selection sort and not merge sort.
+
+/* sort3 timings:
+ * reversed50000 -> 3.768s
+ * sorted50000 -> 3.582s
+ * random50000 -> 3.521s
+ */

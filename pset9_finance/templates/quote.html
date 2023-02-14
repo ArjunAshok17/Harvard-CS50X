@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <!-- Ticker Lookup -->
+    <form action="/quote" method="post">
+        <!-- Get Stock -->
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Ticker Symbol" type="text">
+        </div>
+
+        <!-- Submit Query -->
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+{% endblock %}

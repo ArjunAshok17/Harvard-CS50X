@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Portfolio
+{% endblock %}
+
+{% block main %}
+    <!-- Trade History -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Ticker Symbol</th>
+                <th>Number of Shares</th>
+                <th>Price (@ Time of Action)</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for trade in trades %}
+                <tr>
+                    <td>{{ trade["action"] }}</td>
+                    <td>{{ trade["symbol"] }}</td>
+                    <td>{{ trade["shares"] }}</td>
+                    <td>{{ trade["price"] | usd}}</td>
+                    <td>{{ trade["time"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

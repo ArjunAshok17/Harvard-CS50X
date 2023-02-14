@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote Results
+{% endblock %}
+
+{% block main %}
+    <!-- Ticker Lookup Results -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Stock Name</th>
+                <th>Stock Price</th>
+                <th>Ticker Symbol</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>{{ price["name"] }}</td>
+                <td>{{ price["price"] | usd}}</td>
+                <td>{{ price["symbol"] }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

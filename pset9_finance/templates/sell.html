@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Stocks
+{% endblock %}
+
+{% block main %}
+    <!-- Ticker Lookup -->
+    <form action="/sell" method="post">
+        <!-- Get Stock -->
+        <div class="mb-3">
+            <select name="symbol">
+                <option disabled selected>Select Stock</option>
+                {% for stock in portfolio %}
+                    <option>{{ stock["symbol"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Get Number of Shares -->
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of Shares" type="number">
+        </div>
+
+        <!-- Submit Request -->
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+{% endblock %}
